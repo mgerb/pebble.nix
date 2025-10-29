@@ -17,12 +17,12 @@ stdenv.mkDerivation (finalAttrs: {
   src =
     (rec {
       x86_64-linux = fetchzip {
-        url = "https://developer.rebble.io/s3.amazonaws.com/assets.getpebble.com/pebble-tool/pebble-sdk-${finalAttrs.version}-linux64.tar.bz2";
-        hash = "sha256-LLZX3S/OaxE2wlk/lL1+HfSenwgDWGE7EG2kbiff44Y=";
+        url = "https://sdk.core.store/releases/4.5/sdk-core.tar.gz";
+        hash = "sha256-nrR0nFd4S73rCiVwEEBbN+WuelyqPAsCyFY5D5sU8SU=";
       };
       x86_64-darwin = fetchzip {
-        url = "https://developer.rebble.io/s3.amazonaws.com/assets.getpebble.com/pebble-tool/pebble-sdk-${finalAttrs.version}-mac.tar.bz2";
-        hash = "sha256-DgT75r0pxxyL1csxEvyDC4KO+Yv8sSfA5LSVXCVefZ0=";
+        url = "https://sdk.core.store/releases/4.5/sdk-core.tar.gz";
+        hash = "sha256-nrR0nFd4S73rCiVwEEBbN+WuelyqPAsCyFY5D5sU8SU=";
       };
       aarch64-darwin = x86_64-darwin;
     }).${stdenv.hostPlatform.system};
